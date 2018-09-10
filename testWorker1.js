@@ -19,12 +19,22 @@
 // }, false);
 
 
-function timedCount () {
-  for (var i = 0; i < 10000000000; i++) {
-    if (i % 100000 === 0) {
-      postMessage(i);
-    }
-  }
-}
+// function timedCount () {
+//   for (var i = 0; i < 10000000000; i++) {
+//     if (i % 100000 === 0) {
+//       postMessage(i);
+//     }
+//   }
+// }
 
-timedCount();
+// timedCount();
+
+var obj = {
+    num :999
+}
+postMessage(JSON.stringify(obj));
+addEventListener("message",function (e) {
+    obj.num = e.data*2;
+    postMessage(JSON.stringify(obj));
+    //postMessage(obj);//报错
+})
