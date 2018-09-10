@@ -1,5 +1,5 @@
 
-importScripts('3rd/opencv.js');
+importScripts('https://docs.opencv.org/3.4/opencv.js');
 
 
 
